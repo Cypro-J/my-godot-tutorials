@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bxormk2on86yc"]
+
+[ext_resource type="PackedScene" uid="uid://cgbyvlxuqc870" path="res://configuration.tscn" id="1_37p78"]
+[ext_resource type="Script" uid="uid://7x5q8rqpb7ux" path="res://hud.gd" id="1_64ctp"]
+
+[node name="HUD" type="CanvasLayer" unique_id=2099917569]
+script = ExtResource("1_64ctp")
+
+[node name="Configuration" type="Button" parent="." unique_id=1640854800]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -30.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "⚙️"
+
+[node name="ConfigurationMenu" parent="." unique_id=1173666571 instance=ExtResource("1_37p78")]
+visible = false
+
+[connection signal="pressed" from="Configuration" to="." method="_on_configuration_pressed"]
