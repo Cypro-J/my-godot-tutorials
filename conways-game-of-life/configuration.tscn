@@ -12,23 +12,47 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -98.0
-offset_top = -50.5
+offset_top = -77.5
 offset_right = 98.0
-offset_bottom = 50.5
+offset_bottom = 77.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=2043432137]
+[node name="Game settings" type="Label" parent="VBoxContainer" unique_id=608162994]
+layout_mode = 2
+text = "Game settings"
+horizontal_alignment = 1
+
+[node name="GameSettingsGridContainer" type="GridContainer" parent="VBoxContainer" unique_id=489877946]
+layout_mode = 2
+columns = 2
+
+[node name="GridSizeLabel" type="Label" parent="VBoxContainer/GameSettingsGridContainer" unique_id=1143653118]
+layout_mode = 2
+text = "Grid size"
+
+[node name="GridSize" type="SpinBox" parent="VBoxContainer/GameSettingsGridContainer" unique_id=1043758201]
+layout_mode = 2
+min_value = 1.0
+max_value = 300.0
+value = 1.0
+
+[node name="Display settings" type="Label" parent="VBoxContainer" unique_id=66294858]
+layout_mode = 2
+text = "Display settings"
+horizontal_alignment = 1
+
+[node name="DisplaySettingsGridContainer" type="GridContainer" parent="VBoxContainer" unique_id=2043432137]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 2
 
-[node name="ScreenWidthLabel" type="Label" parent="VBoxContainer/GridContainer" unique_id=1611182712]
+[node name="ScreenWidthLabel" type="Label" parent="VBoxContainer/DisplaySettingsGridContainer" unique_id=1611182712]
 layout_mode = 2
 text = "Screen width"
 
-[node name="ScreenWidth" type="SpinBox" parent="VBoxContainer/GridContainer" unique_id=1500593358]
+[node name="ScreenWidth" type="SpinBox" parent="VBoxContainer/DisplaySettingsGridContainer" unique_id=1500593358]
 layout_mode = 2
 min_value = 640.0
 max_value = 1280.0
@@ -36,11 +60,11 @@ step = 10.0
 value = 640.0
 rounded = true
 
-[node name="ScreenHeightLabel" type="Label" parent="VBoxContainer/GridContainer" unique_id=935276164]
+[node name="ScreenHeightLabel" type="Label" parent="VBoxContainer/DisplaySettingsGridContainer" unique_id=935276164]
 layout_mode = 2
 text = "Screen height"
 
-[node name="ScreenHeight" type="SpinBox" parent="VBoxContainer/GridContainer" unique_id=1252606841]
+[node name="ScreenHeight" type="SpinBox" parent="VBoxContainer/DisplaySettingsGridContainer" unique_id=1252606841]
 layout_mode = 2
 min_value = 480.0
 max_value = 720.0

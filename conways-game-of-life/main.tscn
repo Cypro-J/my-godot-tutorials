@@ -2,10 +2,17 @@
 
 [ext_resource type="Script" uid="uid://blvnd6ohcxrd7" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bxormk2on86yc" path="res://hud.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bftt73bt6su5" path="res://cell.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://dcrdtlpm7px1h" path="res://grid.gd" id="4_1bvp3"]
 
 [node name="Main" type="Node" unique_id=936669924]
 script = ExtResource("1_ig7tw")
+cell_scene = ExtResource("3_h2yge")
 
 [node name="HUD" parent="." unique_id=2099917569 instance=ExtResource("2_0xm2m")]
 
-[node name="Cell" parent="." unique_id=1786044788 instance=ExtResource("3_h2yge")]
+[node name="Grid" type="Node2D" parent="." unique_id=1670128796]
+z_index = 1
+script = ExtResource("4_1bvp3")
+
+[connection signal="configuration_updated" from="HUD" to="." method="_on_hud_configuration_updated"]

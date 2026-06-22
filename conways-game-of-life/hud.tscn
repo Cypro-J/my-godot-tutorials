@@ -19,3 +19,4 @@ text = "⚙️"
 visible = false
 
 [connection signal="pressed" from="Configuration" to="." method="_on_configuration_pressed"]
+[connection signal="configuration_updated" from="ConfigurationMenu" to="." method="_on_configuration_menu_configuration_updated"]
