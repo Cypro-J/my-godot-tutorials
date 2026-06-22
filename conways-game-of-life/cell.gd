@@ -29,7 +29,7 @@ func _draw():
 			if n.position.x < position.x:
 				# Upper left
 				draw_line(Vector2(0, 0), center, Color.DEEP_PINK)
-			elif position.x == position.x:
+			elif n.position.x == position.x:
 				# Up
 				draw_line(Vector2(grid_size/2, 0), center, Color.RED)
 			elif n.position.x > position.x:
@@ -40,8 +40,8 @@ func _draw():
 		elif n.position.y > position.y:
 			if n.position.x < position.x:
 				# Down left
-				draw_line(Vector2(0, 0), center, Color.INDIGO)
-			elif position.x == position.x:
+				draw_line(Vector2(0, grid_size), center, Color.INDIGO)
+			elif n.position.x == position.x:
 				# Down
 				draw_line(center, Vector2(grid_size/2, grid_size), Color.BLUE)
 			elif n.position.x > position.x:

@@ -5,7 +5,7 @@ const DISPLAY_SECTION = "Display"
 
 # Notifies `HUD` that configuration has been updated
 signal configuration_updated
-var grid_size = 300
+var grid_size = 15
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
